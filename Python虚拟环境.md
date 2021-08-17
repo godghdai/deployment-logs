@@ -66,7 +66,7 @@ deactivate
 其他详细介绍，请参考 virtutalenv 官网：https://virtualenv.pypa.io/en/latest/reference/
 
 ### venv:
-Python 从3.3 版本开始，自带了一个虚拟环境 venv，在 PEP-405 中可以看到它的详细介绍。它的很多操作都和 virtualenv 类似，但是两者运行机制不同。
+Python 从3.3 版本开始，自带了一个虚拟环境 venv，在[PEP-405](https://legacy.python.org/dev/peps/pep-0405/) 中可以看到它的详细介绍。它的很多操作都和 virtualenv 类似，但是两者运行机制不同。
 因为是从 3.3 版本开始自带的，这个工具也仅仅支持 python 3.3 和以后版本。所以，要在 python2 上使用虚拟环境，依然要利用 virtualenv 。
 有关venv与virtualenv的区别，virtualenv官网: https://virtualenv.pypa.io/en/latest/reference/#compatibility-with-the-stdlib-venv-module 有详细介绍。
 
@@ -97,9 +97,3 @@ pipenv 的主要特性：
 > 各个地方使用了哈希校验，无论安装还是卸载包都十分安全，且会自动公开安全漏洞。
 > 通过加载.env文件简化开发工作流程。
 > 支持Python2 和 Python3，在各个平台的命令都是一样的。
-
-
-pipenv 功能强大，是博主强烈推荐的用于创建Python虚拟环境及管理包的方式，特此专门写了一篇 pipenv入门教程，如有需要，请移步。
-
-
-原文链接：https://blog.csdn.net/weixin_40922744/article/details/103721870
