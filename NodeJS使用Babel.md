@@ -83,3 +83,38 @@ npm install --save-dev @babel/plugin-proposal-decorators
   "description": ""
 }
 ```
+
+### 测试代码
+
+```js
+[1,3,4].forEach((num,index)=>{
+    console.log(num);
+})
+
+const set = new Set([1, 2, 3]);
+[1, 2, 3].includes(2);
+
+async function a () {
+    await new Promise(function(resolve, reject) {
+      resolve(1)
+    })
+  } 
+
+
+  function isTestable(value) {
+    return function decorator(target) {
+      target.isTestable = value;
+    };
+  }
+
+  @isTestable(true)
+  class MyClass {
+      constructor(){
+          this.name="dsf";
+      }
+      @isTestable(false)
+      update(camera) {
+        console.log(camera);
+      }
+  }
+```
