@@ -39,3 +39,23 @@ trusted-host=mirrors.aliyun.com
 
 windows下，直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini。内容同上。
 
+## 生成requirements.txt
+
+1. 第一种 适用于 **单虚拟环境的情况：** 
+
+```shell
+pip freeze > requirements.txt
+```
+
+2. 当我们使用的是全局环境时， 推荐 使用 `pipreqs` github地址为： https://github.com/bndr/pipreqs
+
+```she
+pip install pipreqs
+pipreqs . --encoding=utf8 --force
+```
+
+## 使用requirements.txt安装依赖的方式：
+
+```shel
+pip install -r requirements.txt
+```
