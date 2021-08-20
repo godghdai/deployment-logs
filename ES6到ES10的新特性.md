@@ -1,5 +1,4 @@
 ## 目录
-
 - [ES6(ES2015)](#es6es2015)
     + [Let 和 Const](#let-%E5%92%8C-const)
     + [类（Class）](#%E7%B1%BBclass)
@@ -58,7 +57,6 @@
     + [globalThis](#globalthis)
     + [import()](#import)
     + [私有元素与方法](#%E7%A7%81%E6%9C%89%E5%85%83%E7%B4%A0%E4%B8%8E%E6%96%B9%E6%B3%95)
-- [参考资料](#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
 
 
 ## ES6(ES2015)
