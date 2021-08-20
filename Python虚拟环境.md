@@ -20,20 +20,20 @@ virtualenv 是目前最流行的 Python 虚拟环境配置工具。它不仅同�
 
 1. pip 安装 virtualenv
 
-```shell
+```sh
 pip3 install virtualenv 
 ```
 
 2. 创建虚拟环境目录
 
-```shell
+```sh
 mkdir myproject
 cd myproject
 ```
 
 3. 创建一个独立的Python运行环境: myenv
 
-```shell
+```sh
 virtualenv --no-site-packages myenv  
 ```
 
@@ -42,7 +42,7 @@ virtualenv --no-site-packages myenv
 
 4. 激活虚拟运行环境
 
-```shell
+```sh
 #windows:
 myenv\Scripts\activate.bat
 #Linux:
@@ -51,7 +51,7 @@ source myenv/bin/activate
 注： 以上命令执行完后会发现命令提示符变了，有个(myenv)前缀，表示当前环境是一个名为“myenv”的Python环境，此时可以在该环境中按照我们熟悉的方式安装库、运行程序等。
 
 5. 安装各种第三方包，并运行Python命令
-```shell
+```sh
 pip install jieba
 python myapp.py
 ```
@@ -60,7 +60,7 @@ python myapp.py
 
 6. 使用deactivate命令退出当前的myenv环境
 
-```shell
+```sh
 deactivate
 ```
 其他详细介绍，请参考 virtutalenv 官网：https://virtualenv.pypa.io/en/latest/reference/
@@ -71,14 +71,14 @@ Python 从3.3 版本开始，自带了一个虚拟环境 venv，在[PEP-405](htt
 有关venv与virtualenv的区别，virtualenv官网: https://virtualenv.pypa.io/en/latest/reference/#compatibility-with-the-stdlib-venv-module 有详细介绍。
 
 venv 安装
-```shell
+```sh
 # Windows 中venv已经以标准库的形式存在，不用再单独安装
 # Linux
 sudo apt-get install python3-venv  # 如有不同版本的Python3,可指定具体版本venv：python3.5-venv
 ```
 
 在当前目录创建一个独立的Python运行环境: myenv
-```shell
+```sh
 # Windows
 py -3 -m venv myenv  
 # Linux 
