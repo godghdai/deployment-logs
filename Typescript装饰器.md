@@ -1,4 +1,4 @@
-## Typescript高级语法之装饰器
+## Typescript装饰器
 ### 1、环境搭建
 
 ```shell
