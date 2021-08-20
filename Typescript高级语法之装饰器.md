@@ -107,7 +107,7 @@ Relfect Metadata，简单来说，你可以通过装饰器来给类添加一些�
 //target值由es5修改为es2015
 {
   "compilerOptions": {
-    "target": "es5",  //
+    "target": "es5"
   }
 }
 ```
