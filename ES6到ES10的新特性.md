@@ -267,7 +267,9 @@ var total = sum.apply(null, list)
 但是如果我们使用扩展操作符，只需要如下：
 
 ```js
-const sum = (x, y, z) => x + y + zconst list = [5, 6, 7]const total = sum(...list)
+const sum = (x, y, z) => x + y + z
+const list = [5, 6, 7]
+const total = sum(...list)
 ```
 
 非常的简单，但是要注意的是扩展操作符只能用于可迭代对象
@@ -275,7 +277,8 @@ const sum = (x, y, z) => x + y + zconst list = [5, 6, 7]const total = sum(...lis
 如果是下面的情况，是会报错的：
 
 ```js
-var obj = {'key1': 'value1'}var array = [...obj] // TypeError: obj is not iterable
+var obj = {'key1': 'value1'}
+var array = [...obj] // TypeError: obj is not iterable
 ```
 
 #### 对象属性简写（Object attribute shorthand）
@@ -364,13 +367,28 @@ Promise.resolve(1)
 当然了，Promise 也很好地解决了回调地狱的问题，例如：
 
 ```js
-ajax(url, () => {    // 处理逻辑    ajax(url1, () => {        // 处理逻辑        ajax(url2, () => {            // 处理逻辑        })    })})
+ajax(url, () => {
+    // 处理逻辑
+    ajax(url1, () => {
+        // 处理逻辑
+        ajax(url2, () => {
+            // 处理逻辑
+        })
+    })
+})
 ```
 
 可以改写成：
 
 ```js
-ajax(url)  .then(res => {      console.log(res)      return ajax(url1)  }).then(res => {      console.log(res)      return ajax(url2)  }).then(res => console.log(res))
+ajax(url)
+  .then(res => {
+      console.log(res)
+      return ajax(url1)
+  }).then(res => {
+      console.log(res)
+      return ajax(url2)
+  }).then(res => console.log(res))
 ```
 
 
@@ -381,7 +399,14 @@ for...of语句在可迭代对象（包括 Array，Map，Set，String，TypedArra
 例子如下：
 
 ```js
-const array1 = ['a', 'b', 'c'];for (const element of array1) {      console.log(element)}// "a"// "b"// "c"
+const array1 = ['a', 'b', 'c'];
+
+for (const element of array1) {
+      console.log(element)
+}
+// "a"
+// "b"
+// "c"
 ```
 
 #### Symbol
@@ -393,7 +418,13 @@ symbol 是一种基本数据类型，Symbol()函数会返回symbol类型的值�
 例子如下：
 
 ```js
-const symbol1 = Symbol();const symbol2 = Symbol(42);const symbol3 = Symbol('foo');console.log(typeof symbol1); // "symbol"console.log(symbol3.toString()); // "Symbol(foo)"console.log(Symbol('foo') === Symbol('foo')); // false
+const symbol1 = Symbol();
+const symbol2 = Symbol(42);
+const symbol3 = Symbol('foo');
+
+console.log(typeof symbol1); // "symbol"
+console.log(symbol3.toString()); // "Symbol(foo)"
+console.log(Symbol('foo') === Symbol('foo')); // false
 ```
 
 #### 迭代器（Iterator）/ 生成器（Generator）
@@ -466,7 +497,13 @@ Map 对象保存键值对。任何值(对象或者原始值) 都可以作为一�
 例子如下，我们甚至可以使用NaN来作为键值：
 
 ```js
-var myMap = new Map();myMap.set(NaN, "not a number");myMap.get(NaN); // "not a number"var otherNaN = Number("foo");myMap.get(otherNaN); // "not a number"
+var myMap = new Map();
+myMap.set(NaN, "not a number");
+
+myMap.get(NaN); // "not a number"
+
+var otherNaN = Number("foo");
+myMap.get(otherNaN); // "not a number"
 ```
 
 WeakMap 对象是一组键/值对的集合，其中的键是弱引用的。其键必须是对象，而值可以是任意的。
@@ -474,7 +511,33 @@ WeakMap 对象是一组键/值对的集合，其中的键是弱引用的。其�
 跟Map的区别与Set跟WeakSet的区别相似，具体代码如下：
 
 ```js
-var wm1 = new WeakMap(),    wm2 = new WeakMap(),    wm3 = new WeakMap();var o1 = {},    o2 = function(){},    o3 = window;wm1.set(o1, 37);wm1.set(o2, "azerty");wm2.set(o1, o2); // value可以是任意值,包括一个对象wm2.set(o3, undefined);wm2.set(wm1, wm2); // 键和值可以是任意对象,甚至另外一个WeakMap对象wm1.get(o2); // "azerty"wm2.get(o2); // undefined,wm2中没有o2这个键wm2.get(o3); // undefined,值就是undefinedwm1.has(o2); // truewm2.has(o2); // falsewm2.has(o3); // true (即使值是undefined)wm3.set(o1, 37);wm3.get(o1); // 37wm3.clear();wm3.get(o1); // undefined,wm3已被清空wm1.has(o1);   // truewm1.delete(o1);wm1.has(o1);   // false
+var wm1 = new WeakMap(),
+    wm2 = new WeakMap(),
+    wm3 = new WeakMap();
+var o1 = {},
+    o2 = function(){},
+    o3 = window;
+
+wm1.set(o1, 37);
+wm1.set(o2, "azerty");
+wm2.set(o1, o2); // value可以是任意值,包括一个对象
+wm2.set(o3, undefined);
+wm2.set(wm1, wm2); // 键和值可以是任意对象,甚至另外一个WeakMap对象
+wm1.get(o2); // "azerty"
+wm2.get(o2); // undefined,wm2中没有o2这个键
+wm2.get(o3); // undefined,值就是undefined
+
+wm1.has(o2); // true
+wm2.has(o2); // false
+wm2.has(o3); // true (即使值是undefined)
+
+wm3.set(o1, 37);
+wm3.get(o1); // 37
+wm3.clear();
+wm3.get(o1); // undefined,wm3已被清空
+wm1.has(o1);   // true
+wm1.delete(o1);
+wm1.has(o1);   // false
 ```
 
 #### Proxy/Reflect
@@ -660,25 +723,33 @@ String.prototype.split 调用 RegExp.prototype[Symbol.split]
 - Array.prototype.from：转换具有Iterator接口的数据结构为真正数组，返回新数组。
 
 ```js
-console.log(Array.from('foo')) // ["f", "o", "o"]console.log(Array.from([1, 2, 3], x => x + x)) // [2, 4, 6]
+console.log(Array.from('foo')) // ["f", "o", "o"]
+console.log(Array.from([1, 2, 3], x => x + x)) // [2, 4, 6]
 ```
 
 - Array.prototype.of()：转换一组值为真正数组，返回新数组。
 
 ```js
-Array.of(7)       // [7] Array.of(1, 2, 3) // [1, 2, 3]Array(7)          // [empty, empty, empty, empty, empty, empty]Array(1, 2, 3)    // [1, 2, 3]
+Array.of(7)       // [7] 
+Array.of(1, 2, 3) // [1, 2, 3]
+Array(7)          // [empty, empty, empty, empty, empty, empty]
+Array(1, 2, 3)    // [1, 2, 3]
 ```
 
 - Array.prototype.copyWithin()：把指定位置的成员复制到其他位置，返回原数组
 
 ```js
-const array1 = ['a', 'b', 'c', 'd', 'e']console.log(array1.copyWithin(0, 3, 4)) // ["d", "b", "c", "d", "e"]console.log(array1.copyWithin(1, 3)) // ["d", "d", "e", "d", "e"]
+const array1 = ['a', 'b', 'c', 'd', 'e']
+console.log(array1.copyWithin(0, 3, 4)) // ["d", "b", "c", "d", "e"]
+console.log(array1.copyWithin(1, 3)) // ["d", "d", "e", "d", "e"]
 ```
 
 - Array.prototype.find()：返回第一个符合条件的成员
 
 ```js
-const array1 = [5, 12, 8, 130, 44]const found = array1.find(element => element > 10)console.log(found) // 12
+const array1 = [5, 12, 8, 130, 44]
+const found = array1.find(element => element > 10)
+console.log(found) // 12
 ```
 
 - Array.prototype.findIndex()：返回第一个符合条件的成员索引值
