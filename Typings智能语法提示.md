@@ -46,12 +46,12 @@ cat typings/index.d.ts
 ```
 
 ### 数据源
-> npm - dependencies from NPM
-> github - dependencies directly from GitHub (E.g. Duo, JSPM)
-> bower - dependencies from Bower
-> common - "standard" libraries without a known "source"
-> shared - shared library functionality
-> lib - shared environment functionality (mirror of shared) (--global)
-> env - environments (E.g. atom, electron) (--global)
-> global - global (window.<var>) libraries (--global)
-> dt - typings from DefinitelyTyped (usually --global)
+- npm - dependencies from NPM 
+- github - dependencies directly from GitHub (E.g. Duo, JSPM)
+- bower - dependencies from Bower
+- common - "standard" libraries without a known "source"
+- shared - shared library functionality
+- lib - shared environment functionality (mirror of shared) (--global)
+- env - environments (E.g. atom, electron) (--global)
+- global - global (window.<var>) libraries (--global)
+- dt - typings from DefinitelyTyped (usually --global)
