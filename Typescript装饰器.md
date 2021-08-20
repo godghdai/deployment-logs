@@ -1,5 +1,16 @@
 ## Typescript装饰器
-### 1、环境搭建
+
+- [目录](#typescript--------)
+    + [1、环境搭建](#1、环境搭建)
+    + [2、类的装饰器](#2、类的装饰器)
+    + [3、类的属性装饰器](#3、类的属性装饰器)
+    + [4、类的参数装饰器](#4、类的参数装饰器)
+    + [5、reflect-metadata](#5、reflect-metadata)
+    + [6、装饰器执行顺序](#6、装饰器执行顺序)``
+
+#### 1、环境搭建
+
+------
 
 ```shell
 npm init -y 
@@ -12,10 +23,14 @@ npm install ts-node -D
 
 ```json
 /* Experimental Options */
-"experimentalDecorators": true,             /* Enables experimental support for ES7 decorators. */
-"emitDecoratorMetadata": true,   			/* Enables experimental support for emitting type metadata for decorators. */
+"experimentalDecorators": true,
+"emitDecoratorMetadata": true,
 ```
-### 2、类的装饰器
+
+
+#### 2、类的装饰器
+
+------
 
 ```typescript
 import 'reflect-metadata';
@@ -54,7 +69,11 @@ const person = new Person("hello");
 person.getName();
 ```
 
-### 3、类的属性装饰器
+
+
+#### 3、类的属性装饰器
+
+------
 
 ```typescript
 function WritableDecorator(target: any, key: string): any {
@@ -77,7 +96,11 @@ user.name="hello" //无法赋值
 console.log(user.name)
 ```
 
-### 4、类的参数装饰器
+
+
+#### 4、类的参数装饰器
+
+------
 
 ```typescript
 function paramDecorator(target: any, key: string, paramIndex: number) {
@@ -95,7 +118,11 @@ test.getInfo('yzd', 30)
 
 ```
 
-### 5、reflect-metadata
+
+
+#### 5、reflect-metadata
+
+------
 
 Reflect是es6中的内容，作用就是可以实现对变量操作的函数化
 
@@ -106,8 +133,8 @@ Relfect Metadata，简单来说，你可以通过装饰器来给类添加一些�
 ```json
 //target值由es5修改为es2015
 {
-  "compilerOptions": {
-    "target": "es5"
+  "compilerOptions": {   
+    "target": "es5",
   }
 }
 ```
@@ -155,9 +182,13 @@ value value
 value value
 ```
 
-### 6、装饰器执行顺序
 
-属性->方法->方法参数->类
+
+#### 6、装饰器执行顺序
+
+------
+
+##### 属性->方法->方法参数->类
 
 同样的装饰器，倒序执行
 
@@ -192,7 +223,7 @@ class C {
 var c: any = new C();
 ```
 
-**运行结果**
+##### 运行结果
 
 ```shell
 D:\ts>ts-node ./src/test.ts
