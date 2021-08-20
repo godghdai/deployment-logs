@@ -1,4 +1,4 @@
-# NodeJs nrm和nvm
+# NodeJS的nrm和nvm
 
 #### nrm 和 nvm
 
