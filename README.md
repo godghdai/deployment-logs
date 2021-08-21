@@ -9,4 +9,12 @@
     - [Python](https://www.python.org/)
        + [配置国内镜像源](https://github.com/godghdai/deployment-logs/blob/main/Python/Python%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%BA%90.md)
        + [使用虚拟环境](https://github.com/godghdai/deployment-logs/blob/main/Python/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83.md)
-  
+- awesome
+    - [awesome-nodejs](https://github.com/sindresorhus/awesome-nodejs)
+    - [awesome-javascript](https://github.com/sorrycc/awesome-javascript)
+    - [awesome-python](https://github.com/vinta/awesome-python)
+    - [awesome-go](https://github.com/avelino/awesome-go)
+    - [awesome-rust](https://github.com/rust-unofficial/awesome-rust)
+- framework
+    - [awesome-react](https://github.com/enaqx/awesome-react)
+    - [awesome-vue](https://github.com/vuejs/awesome-vue)
