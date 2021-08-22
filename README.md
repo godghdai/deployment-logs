@@ -3,6 +3,7 @@
        + [配置国内源](https://github.com/godghdai/deployment-logs/blob/main/NodeJS/NodeJS%E9%85%8D%E7%BD%AE%E5%9B%BD%E5%86%85%E6%BA%90.md)
        + [使用Babel](https://github.com/godghdai/deployment-logs/blob/main/NodeJS/NodeJS%E4%BD%BF%E7%94%A8Babel.md)
        + [nrm和nvm](https://github.com/godghdai/deployment-logs/blob/main/NodeJS/NodeJS%20nrm%E5%92%8Cnvm.md)
+       + [PM2](https://github.com/godghdai/deployment-logs/blob/main/NodeJS/PM2%E4%BB%8B%E7%BB%8D%E5%8F%8A%E7%AE%80%E6%98%93%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.md)
     - [Typescript](https://www.typescriptlang.org/)
        + [Typescript装饰器](https://github.com/godghdai/deployment-logs/blob/main/Typescript/Typescript%E8%A3%85%E9%A5%B0%E5%99%A8.md)
        + [Typings智能语法提示](https://github.com/godghdai/deployment-logs/blob/main/Typescript/Typings%E6%99%BA%E8%83%BD%E8%AF%AD%E6%B3%95%E6%8F%90%E7%A4%BA.md)
