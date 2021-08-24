@@ -97,24 +97,36 @@ rust
 2. 剩下步骤与通用步骤下相同
 
 #### Windows下，我的环境为Win10
-
+ 
 1. 安装`msys2`, 我安装在 `C:\msys64\`
 
 2. 运行`mingw64.exe`
 
-3. 运行`pacman -S --noconfirm base-devel mingw-w64-x86_64-toolchain git`
+3. 修改安装源
+进入msys64/etc/pacman.d/, 需要修改三个文件, 都添加在Server列表第一行
+```
+mirrorlist.mingw32
+Server = http://mirrors.ustc.edu.cn/msys2/mingw/i686/
 
-4. 添加**配置**到`C:\Users\YourName\.cargo\config`
+mirrorlist.mingw64
+Server = http://mirrors.ustc.edu.cn/msys2/mingw/x86_64/
 
-5. 添加`C:\msys64\usr\bin`（如果报冲突，这个就不添加）和`C:\msys64\mingw64\bin`到`Path`环境变量
+mirrorlist.msys
+Server = http://mirrors.ustc.edu.cn/msys2/msys/$arch/
+```      
+4. 运行`pacman -S --noconfirm base-devel mingw-w64-x86_64-toolchain git`
+   
+5. 添加**配置**到`C:\Users\YourName\.cargo\config`
 
-6. 安装`rust`，选择`stable-gnu`或者`nightly-gnu`为默认工具链
+6. 添加`C:\msys64\usr\bin`（如果报冲突，这个就不添加）和`C:\msys64\mingw64\bin`到`Path`环境变量
 
-7. 安装   CLion
+7. 安装`rust`，选择`stable-gnu`或者`nightly-gnu`为默认工具链
+
+8. 安装   CLion
    1. 并添加`MinGW`工具链到`CLion`，路径为`C:\msys64\mingw64`
    2. 安装`intellij-rust`插件
 
-8. 剩下步骤与通用步骤相同
+9. 剩下步骤与通用步骤相同
 
 **配置**
 
