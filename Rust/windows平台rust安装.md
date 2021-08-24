@@ -14,10 +14,10 @@
 
 #### 3、下载安装
 　　https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe
-
-　　自定义安装
-
-　　default host triple  设置为 x86_64-pc-windows-gnu
+  
+```
+安装过程中请选择第二项 “Customize installation” ！注意到default host triple中设置的是x86_64-pc-windows-msvc，而由于本文所使用的调试器是GDB，故需要修改为x86_64-pc-windows-gnu。default 　　　　　　toolchain请选择stable，即稳定版。nightly为前瞻版（更新频率快），'beta’为测试版，实际使用时我们仍需使用到nightly版，后文会提到。
+```
 
 #### 4、配置Crates.io国内镜像
 　　新建C:\Users\[用户名]\.cargo\config(config文件不带扩展)，将以下内容写入config文件　　
