@@ -1,4 +1,4 @@
-## windows平台rust安装
+### windows平台rust安装
 
 #### 从[rustup.rs](https://rustup.rs/)官网下载 rustup-init.exe
 
@@ -76,3 +76,52 @@ registry = "https://mirrors.ustc.edu.cn/crates.io-index/"
 #### vscode 开发环境 插件安装
 rust  
 
+### [Rust的CLion调试方法](https://rustcc.cn/article?id=85282d12-6b84-4504-9a47-c1c3b3baa3fc)
+
+####  通用步骤
+
+1. 安装`rust`
+2. 安装`CLion`以及`intellij-rust`插件
+3. `CLion`开起`Rust`项目
+4. 打上一个断点，然后点击`main`函数旁边的“播放”按钮，选中“虫子”
+5. 程序将在你的断点处暂停
+
+#### macOS下，我的环境为10.13
+
+1. 安装`Command Line Tools`或者`xcode`
+2. 剩下步骤与通用步骤下相同
+
+#### Ubuntu下，我的环境为16.04
+
+1. 安装`build-essential`和`git`
+2. 剩下步骤与通用步骤下相同
+
+#### Windows下，我的环境为Win10
+
+1. 安装`msys2`, 我安装在 `C:\msys64\`
+
+2. 运行`mingw64.exe`
+
+3. 运行`pacman -S --noconfirm base-devel mingw-w64-x86_64-toolchain git`
+
+4. 添加**配置**到`C:\Users\YourName\.cargo\config`
+
+5. 添加`C:\msys64\usr\bin`（如果报冲突，这个就不添加）和`C:\msys64\mingw64\bin`到`Path`环境变量
+
+6. 安装`rust`，选择`stable-gnu`或者`nightly-gnu`为默认工具链
+
+7. 安装   CLion
+   1. 并添加`MinGW`工具链到`CLion`，路径为`C:\msys64\mingw64`
+   2. 安装`intellij-rust`插件
+
+8. 剩下步骤与通用步骤相同
+
+**配置**
+
+```
+[target.x86_64-pc-windows-gnu]
+linker = "C:\\msys64\\mingw64\\bin\\gcc.exe"
+ar = "C:\\msys2\\mingw64\\bin\\ar.exe"
+```
+
+如果你的`GDB`版本为`v8.2`及以上，那至少需要`CLion 2018.3`及以上版本
