@@ -37,7 +37,9 @@ registry = "https://mirrors.ustc.edu.cn/crates.io-index/"
 ####  6、新建项目
 
 　　cargo new test
+  
 　　cd test
+  
 　　cargo run 报错 linker `link.exe` not found
 
 安装c++build工具 默认安装即可
