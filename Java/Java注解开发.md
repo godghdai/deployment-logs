@@ -1,3 +1,29 @@
+## 目录
+- [Java注解开发](#java%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91)
+    + [什么是注解](#%E4%BB%80%E4%B9%88%E6%98%AF%E6%B3%A8%E8%A7%A3)
+    + [注解出现的位置](#%E6%B3%A8%E8%A7%A3%E5%87%BA%E7%8E%B0%E7%9A%84%E4%BD%8D%E7%BD%AE)
+    + [注解不会影响程序代码的执行](#%E6%B3%A8%E8%A7%A3%E4%B8%8D%E4%BC%9A%E5%BD%B1%E5%93%8D%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%E7%9A%84%E6%89%A7%E8%A1%8C)
+    + [注解的作用](#%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%9C%E7%94%A8)
+- [JDK自带的注解](#jdk%E8%87%AA%E5%B8%A6%E7%9A%84%E6%B3%A8%E8%A7%A3)
+    + [@Override](#override)
+    + [@Deprecated](#deprecated)
+    + [@SuppressWarings](#suppresswarings)
+- [开发自定义注解](#%E5%BC%80%E5%8F%91%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3)
+    + [语法规则](#%E8%AF%AD%E6%B3%95%E8%A7%84%E5%88%99)
+    + [元注解](#%E5%85%83%E6%B3%A8%E8%A7%A3)
+      - [@Target](#target)
+      - [@Retention](#retention)
+      - [@Documented](#documented)
+      - [@Inherited](#inherited)
+- [注解开发实例](#%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91%E5%AE%9E%E4%BE%8B)
+    + [通过注解创建数据库表](#%E9%80%9A%E8%BF%87%E6%B3%A8%E8%A7%A3%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8)
+      - [需求分析](#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90)
+      - [编写实体类](#%E7%BC%96%E5%86%99%E5%AE%9E%E4%BD%93%E7%B1%BB)
+      - [编写注解](#%E7%BC%96%E5%86%99%E6%B3%A8%E8%A7%A3)
+      - [实体类上标注注解](#%E5%AE%9E%E4%BD%93%E7%B1%BB%E4%B8%8A%E6%A0%87%E6%B3%A8%E6%B3%A8%E8%A7%A3)
+      - [注解解释器](#%E6%B3%A8%E8%A7%A3%E8%A7%A3%E9%87%8A%E5%99%A8)
+      - [测试结果](#%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C)
+
 ## Java注解开发
 #### 什么是注解
 
