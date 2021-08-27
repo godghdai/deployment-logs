@@ -14,6 +14,8 @@
        + [使用虚拟环境](https://github.com/godghdai/deployment-logs/blob/main/Python/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83.md)
     - [Go](https://studygolang.com/pkgdoc)
        + [国内模块代理](https://github.com/godghdai/deployment-logs/blob/main/Go/%E5%9B%BD%E5%86%85%E6%A8%A1%E5%9D%97%E4%BB%A3%E7%90%86.md)
+    - [Java](https://www.java.com/zh-CN/)
+       + [注解开发](https://github.com/godghdai/deployment-logs/blob/main/Java/Java%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91.md)
     - [Rust](https://doc.rust-lang.org/book/) 
        + [windows平台环境搭建](https://github.com/godghdai/deployment-logs/blob/main/Rust/windows%E5%B9%B3%E5%8F%B0rust%E5%AE%89%E8%A3%85.md)
     - [Css](https://developer.mozilla.org/en-US/docs/Web/CSS)
