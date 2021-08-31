@@ -14,6 +14,7 @@
        + [使用虚拟环境](https://github.com/godghdai/deployment-logs/blob/main/Python/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83.md)
     - [Go](https://studygolang.com/pkgdoc)
        + [国内模块代理](https://github.com/godghdai/deployment-logs/blob/main/Go/%E5%9B%BD%E5%86%85%E6%A8%A1%E5%9D%97%E4%BB%A3%E7%90%86.md)
+       + [爬虫利器](https://github.com/godghdai/deployment-logs/blob/main/Go/go%E8%AF%AD%E8%A8%80%E7%88%AC%E8%99%AB%E5%88%A9%E5%99%A8.md)
     - [Java](https://www.java.com/zh-CN/)
        + [注解开发](https://github.com/godghdai/deployment-logs/blob/main/Java/Java%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91.md)
        + [Java8新特性](https://github.com/godghdai/deployment-logs/blob/main/Java/Java8%20%E6%96%B0%E7%89%B9%E6%80%A7.md)
