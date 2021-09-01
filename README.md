@@ -21,6 +21,7 @@
        + [Java8新特性](https://github.com/godghdai/deployment-logs/blob/main/Java/Java8%20%E6%96%B0%E7%89%B9%E6%80%A7.md)
     - [Rust](https://doc.rust-lang.org/book/) 
        + [windows平台环境搭建](https://github.com/godghdai/deployment-logs/blob/main/Rust/windows%E5%B9%B3%E5%8F%B0rust%E5%AE%89%E8%A3%85.md)
+       + [Rust包管理器](https://github.com/godghdai/deployment-logs/blob/main/Rust/Rust%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8.md)
     - [Css](https://developer.mozilla.org/en-US/docs/Web/CSS)
        + [Sass、LESS 和 Stylus区别总结](https://github.com/godghdai/deployment-logs/blob/main/Css/Sass%E3%80%81LESS%20%E5%92%8C%20Stylus%E5%8C%BA%E5%88%AB%E6%80%BB%E7%BB%93.md) 
 - awesome
