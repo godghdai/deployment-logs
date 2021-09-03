@@ -37,7 +37,8 @@ chromedp是一个golang编写的适用于**Chrome DevTools Protocol**的程序�
 ```
 - https://github.com/chromedp/chromedp
 - https://github.com/chromedp/examples
-- https://developers.google.cn/web/tools/chrome-devtools/
+- https://github.com/ChromeDevTools/awesome-chrome-devtools
+- https://chromedevtools.github.io/devtools-protocol/
 
 ```
 //chrome开启调试端口
