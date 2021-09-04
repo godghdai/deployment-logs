@@ -9,3 +9,4 @@
 - https://doc.rust-lang.org/book/
 - https://learnku.com/docs/nomicon/2018/brief-introduction/4702#834833
 - https://learnku.com/docs/rust-lang/2018
+- https://saghm.github.io/five-rust-things/
