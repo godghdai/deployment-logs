@@ -5,3 +5,6 @@
 - https://doc.rust-lang.org/stable/rust-by-example/error/option_unwrap/map.html
 - https://rust-by-example.budshome.com/error/option_unwrap/map.html
 - https://rust-by-example.budshome.com/flow_control/match/destructuring/destructure_pointers.html
+- https://doc.rust-lang.org/nightly/nomicon/intro.html
+- https://doc.rust-lang.org/book/
+- https://learnku.com/docs/nomicon/2018/brief-introduction/4702#834833
