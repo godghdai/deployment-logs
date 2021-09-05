@@ -11,3 +11,4 @@
 - https://learnku.com/docs/rust-lang/2018
 - https://saghm.github.io/five-rust-things/
 - https://www.zhihu.com/question/282113351
+- https://rust-lang.github.io/async-book/
