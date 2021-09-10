@@ -38,7 +38,10 @@ fn main() {
     let mut shapes = Vec::<Box<dyn Shape>>::new();
     shapes.push(point);
     shapes.push(circle);
-    for shape in &shapes {
+    for shape in &shapes{
+        println!("{}", shape.to_string());
+    }
+    for shape in shapes.iter() {
         println!("{}", shape.to_string());
     }
 }
