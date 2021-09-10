@@ -1,4 +1,3 @@
-```rust
 trait Shape {
     fn to_string(&self) -> String;
 }
@@ -43,4 +42,3 @@ fn main() {
         println!("{}", shape.to_string());
     }
 }
-```
