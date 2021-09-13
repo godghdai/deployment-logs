@@ -15,3 +15,4 @@
 - https://tokio-zh.github.io/document/
 - https://github.com/rust-lang/rustlings/tree/main/exercises
 - https://github.com/SergioBenitez/Rocket
+- https://github.com/rust-lang/futures-rs
