@@ -16,3 +16,4 @@
 - https://github.com/rust-lang/rustlings/tree/main/exercises
 - https://github.com/SergioBenitez/Rocket
 - https://github.com/rust-lang/futures-rs
+- https://github.com/forthespada/CS-Books
