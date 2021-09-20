@@ -7,9 +7,9 @@
 #include <unistd.h>
 #include <string.h>
 /*
--y:year		-m:month
--d:day		-H:hour
--M:minute	-S:second
+*-y:year		-m:month
+*-d:day		-H:hour
+*-M:minute	-S:second
 */
 
 #define TIMESTRSIZE 1024
