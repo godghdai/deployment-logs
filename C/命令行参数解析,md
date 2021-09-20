@@ -1,0 +1,96 @@
+命令行参数解析
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <unistd.h>
+#include <string.h>
+/*
+-y:year		-m:month
+-d:day		-H:hour
+-M:minute	-S:second
+*/
+
+#define TIMESTRSIZE 1024
+#define FMTSTRSIZE  1024
+
+int main(int argc,char ** argv){
+    FILE *fp=stdout;
+    time_t stamp;
+    struct tm *tm;
+    char timestr[TIMESTRSIZE];
+    int c;
+    char fmtstr[FMTSTRSIZE];
+    fmtstr[0]='\0';
+    
+    stamp=time(NULL);
+    tm=localtime(&stamp);
+    
+    while(1){
+        //- 识别非选项参数
+        //: 识别可选项后面的参数
+        c=getopt(argc,argv,"-H:MSy:md");
+        if(c<0)
+            break;
+        switch(c)
+        {	
+            //识别非选项参数，对应路径列表
+            case 1:
+                //optind为全局变量
+                fp=fopen(argv[optind-1],"w");
+                if(fp==NULL){
+                    perror("fopen()");
+                    fp=stdout;
+                }
+                break;
+            case 'H':
+                //optarg为全局变量
+                if(strcmp(optarg,"12")==0)
+                     strncat(fmtstr,"%I(%P) ",FMTSTRSIZE);
+                else if(strcmp(optarg,"24")==0)
+                     	strncat(fmtstr,"%H ",FMTSTRSIZE);
+                	 else
+                         fprintf(stderr,"Invalid argument of -H\n");
+                break;
+			case 'M':
+                strncat(fmtstr,"%M ",FMTSTRSIZE);
+                break;
+            case 'S':
+                strncat(fmtstr,"%S ",FMTSTRSIZE);
+                break; 
+            case 'y':
+                 if(strcmp(optarg,"2")==0)
+                     strncat(fmtstr,"%y ",FMTSTRSIZE);
+                 else if(strcmp(optarg,"4")==0)
+                     	strncat(fmtstr,"%Y ",FMTSTRSIZE);
+                	  else 
+                          fprintf(stderr,"Invalid argument of -y\n")
+                break; 
+            case 'm':
+                 strncat(fmtstr,"% m",FMTSTRSIZE);
+                break;
+            case 'd':
+                 strncat(fmtstr,"%d ",FMTSTRSIZE);
+                break;
+            default:
+                break;
+        }
+    }
+    strncat(fmtstr,"\n",FMTSTRSIZE);
+    strftime(timestr,TIMESTRSIZE,fmtstr,tm);
+    fputs(timestr,fp);
+    if (fp!=stdout)
+        fclose(fp);
+    exit(0);
+}
+```
+
+```shell
+mydate -M -S -m -d -y
+mydate -MSmdy
+mydate -H 12 -m -y 4
+mydate -H 24 
+mydate -y 2 -H 4 -M /tmp/out -S /tmp/out1 -m /tmp/out2 -d
+```
+
