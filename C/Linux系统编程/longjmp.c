@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <setjmp.h>
 
+/*
+ 递归函数之间跳转
+*/
+
 static jmp_buf save;
 
 static void d(void){
