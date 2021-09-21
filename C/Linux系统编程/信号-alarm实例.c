@@ -26,10 +26,10 @@ static void alrm_handler(int s)
 int main()
 {
     int64_t count=0;
-
-    alarm(5);
+    
     signal(SIGALRM,alrm_handler);
-
+    alarm(5);
+   
     while(loop)
         count++;
 
