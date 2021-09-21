@@ -32,6 +32,7 @@
     - [go](https://github.com/avelino/awesome-go)
     - [rust](https://github.com/rust-unofficial/awesome-rust)
     - [machine learning](https://github.com/josephmisiti/awesome-machine-learning)
+    - [Linux-Software](https://github.com/luong-komorebi/Awesome-Linux-Software)
 - framework
     - [react](https://github.com/enaqx/awesome-react)
     - [vue](https://github.com/vuejs/awesome-vue)
