@@ -8,3 +8,4 @@ sudo apt-get install gdb
 
 2、安装编译环境
 sudo apt-get install build-essential
+sudo apt-get install codeblocks-contrib
