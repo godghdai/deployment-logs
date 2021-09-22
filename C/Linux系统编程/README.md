@@ -27,3 +27,27 @@ settings–>environment–>generalsettings–>Terminal to launch console program
 ```
 sudo apt-get install manpages-posix-dev
 ```
+
+## 线程
+#### 互斥量
+```
+pthread_mutex_t
+pthread_mutex_init();
+pthread_mutex_destroy();
+pthread_mutex_lock();
+pthread_mutex_trylock();
+pthread_mutex_unlock();
+pthread_once();
+```
+#### 条件变量
+
+```
+pthread_cond_t
+pthread_cond_init();
+pthread_cond_destroy();
+pthread_cond_broadcast();
+pthread_cond_signal();
+```
+#### 信号量
+```
+```
