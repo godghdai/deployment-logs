@@ -7,3 +7,15 @@
 |  5   | Kubuntu     | https://kubuntu.org/      |
 |  6   | Endeavor OS | https://endeavouros.com/  |
 
+| POSITION | 2021          | 2020          |
+| :------: | :------------ | :------------ |
+|    1     | MX Linux      | MX Linux      |
+|    2     | Manjaro       | Manjaro       |
+|    3     | Linux Mint    | Linux Mint    |
+|    4     | Ubuntu        | Debian        |
+|    5     | Debian        | Pop!_OS       |
+|    6     | Elementary OS | Debian        |
+|    7     | Solus         | Elementary OS |
+|    8     | Zorin OS      | Solus         |
+|    9     | Fedora        | Fedora        |
+|    10    | Deepin        | Zorin         |
