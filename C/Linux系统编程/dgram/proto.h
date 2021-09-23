@@ -4,11 +4,6 @@
 #define PORT "8080"
 #define NAMESIZE 11
 
-/*
-netstat -anu       //udp
-netstat -ant       //tcp
-*/
-
 struct msg_st
 {
     uint8_t name[NAMESIZE];
