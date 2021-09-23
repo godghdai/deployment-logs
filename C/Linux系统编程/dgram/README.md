@@ -30,12 +30,13 @@ if(setsockopt(sd,SOL_SOCKET,SO_BROADCAST,&val,sizeof(val))<0)
 }
 ```
 
-#### 多播组
+#### 多播组 
+特殊组 224.0.0.1
 ```
 #define MGROUP "224.2.2.2"
 ```
 ```
-//接务端
+//接收端
 struct ip_mreqn mreq;
 inet_pton(AF_INET,MGROUP,&mreq.imr_multiaddr);
 inet_pton(AF_INET,"0.0.0.0",&mreq.imr_address);
