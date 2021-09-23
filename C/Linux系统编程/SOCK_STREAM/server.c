@@ -6,8 +6,6 @@
 #include <arpa/inet.h>
 #include <time.h>
 
-#include "proto.h"
-
 #define IPSTRSIZE 40
 #define SERVERPORT "8080"
 #define BUFSIZE 1024
