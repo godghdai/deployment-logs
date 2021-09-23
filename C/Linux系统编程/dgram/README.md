@@ -15,8 +15,9 @@ inet_ntop();
 ```
 
 多点通讯：广播（全网广播，子网广播），多播/组播
-注意关闭防火墙，接收端和发送端，必须设置 SO_BROADCAST
+
 ```c
+//注意关闭防火墙，接收端和发送端，必须设置 SO_BROADCAST
 raddr.sin_family=AF_INET;
 raddr.sin_port=htons(atoi(PORT));
 inet_pton(AF_INET,"255.255.255.255",&raddr.sin_addr);
