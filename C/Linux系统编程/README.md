@@ -49,6 +49,10 @@ pthread_cond_destroy();
 pthread_cond_broadcast();
 pthread_cond_signal();
 ```
-#### 信号量
+
+#### 安装openssl
+
 ```
+sudo apt-get install openssl
+sudo apt-get install libssl-dev
 ```
